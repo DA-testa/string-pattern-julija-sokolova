@@ -22,9 +22,10 @@ def read_input():
         with open("tests/06","r") as file:
             pattern=file.readline().strip()
             text=file.readline().strip()
+            return t_input, pattern,text
     else:
         exit()
-    return t_input, pattern,text
+    
 
 def print_occurrences(output):
     # this function should control output, it doesn't need any return
