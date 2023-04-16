@@ -1,4 +1,5 @@
 # python3
+#Jūlija Sokolova 221RDB058
 
 def read_input():
     # this function needs to aquire input both from keyboard and file
