@@ -14,18 +14,42 @@ def read_input():
     # return both lines in one return
     
     # this is the sample return, notice the rstrip function
-    return (input().rstrip(), input().rstrip())
+    t_input=input()
+    t_input=t_input.strip().upper()
+    if t_input=='I':
+        pattern=input().strip()
+        text=input().strip()
+    elif t_input=='F':
+        with open("tests/06") as file:
+            pattern=file.readLine().strip()
+            text=file.readLine().strip()
+    return t_input, pattern,text
 
 def print_occurrences(output):
     # this function should control output, it doesn't need any return
     print(' '.join(map(str, output)))
 
-def get_occurrences(pattern, text):
+def get_occurrences(pattern, text, t_input):
     # this function should find the occurances using Rabin Karp alghoritm 
-
+    text_l=len(text)
+    pattern_l=len(pattern)
+    occurances=[]
+    if t_input=='I':
+        for i in range(text_l-pattern_l+1)
+            if text[i: i+p]==pattern:
+                occurances.append(i)
+    elif t_input=='F':
+        pattern1=sum(ord(pattern[i])*pow(10,pattern_l-i-1) for i in range(pattern_l))
+        text1=sum(ord(text[i])*pow(10,pattern_l-i-1) for i in range(pattern_l))
+        for i in range(text_l-pattern_l+1):
+            if text1==pattern1 and text[i:i +p)==pattern:
+                occurances.append(i)
+            if i<text_l-pattern_l:
+                text1=(text1-ord(text[i]*pow(10,pattern_l-1))*10+ord9text[i+pattern_l]) 
+                                        
     # and return an iterable variable
-    return [0]
-
+    return [occurances]
+    
 
 # this part launches the functions
 if __name__ == '__main__':
