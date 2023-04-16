@@ -47,8 +47,7 @@ def get_occurrences(pattern, text, t_input):
         pattern1=sum(ord(pattern[i])*pow(10,pattern_l-i-1) for i in range(pattern_l))
         text1=sum(ord(text[i])*pow(10,pattern_l-i-1) for i in range(pattern_l))
         for i in range(text_l-pattern_l+1):
-            if text1==pattern1: 
-                if text[i:i +pattern_l]==pattern:
+            if text1==pattern1 and text[i:i +pattern_l]==pattern:: 
                 occurances.append(i)
             if i<text_l-pattern_l:
                 text1=(text1-ord(text[i])*pow(10,pattern_l-1))*10+ord(text[i+pattern_l]) 
