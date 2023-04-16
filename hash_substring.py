@@ -36,7 +36,7 @@ def get_occurrences(pattern, text, t_input):
     occurances=[]
     if t_input=='I':
         for i in range(text_l-pattern_l+1):
-            if text[i: i+p]==pattern:
+            if text[i: i+pattern_l]==pattern:
                 occurances.append(i)
     elif t_input=='F':
         pattern1=sum(ord(pattern[i])*pow(10,pattern_l-i-1) for i in range(pattern_l))
