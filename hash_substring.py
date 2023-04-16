@@ -27,7 +27,7 @@ def read_input():
             
     else:
         exit()
-    return t_input, pattern,text              
+return t_input, pattern,text              
     
 
 def print_occurrences(output):
