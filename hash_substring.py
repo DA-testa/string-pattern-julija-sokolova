@@ -21,8 +21,8 @@ def read_input():
         text=input().strip()
     elif t_input=='F':
         with open("tests/06") as file:
-            pattern=file.readLine().strip()
-            text=file.readLine().strip()
+            pattern=file.readline().strip()
+            text=file.readline().strip()
     return t_input, pattern,text
 
 def print_occurrences(output):
