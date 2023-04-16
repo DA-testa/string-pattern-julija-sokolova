@@ -48,7 +48,7 @@ def get_occurrences(pattern, text, t_input):
                 text1=(text1-ord(text[i])*pow(10,pattern_l-1))*10+ord(text[i+pattern_l]) 
                                         
     # and return an iterable variable
-    return [occurances]
+    return occurances
     
 
 # this part launches the functions
