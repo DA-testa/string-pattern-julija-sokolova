@@ -14,8 +14,7 @@ def read_input():
     # return both lines in one return
     
     # this is the sample return, notice the rstrip function
-    t_input=input()
-    t_input=t_input.strip().upper()
+    t_input=input().strip().upper()
     if t_input=="I":
         pattern=input().strip()
         text=input().strip()
@@ -23,6 +22,8 @@ def read_input():
         with open("tests/06","r") as file:
             pattern=file.readline().strip()
             text=file.readline().strip()
+    else:
+        exit()
     return t_input, pattern,text
 
 def print_occurrences(output):
