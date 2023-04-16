@@ -20,8 +20,7 @@ def read_input():
         pattern=input().strip()
         text=input().strip()
     elif t_input=="F":
-        files=input()
-        with open('tests/06'+files,"r") as file:
+        with open("tests/06","r") as file:
             pattern=file.readline().strip()
             text=file.readline().strip()
     return t_input, pattern,text
