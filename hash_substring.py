@@ -16,11 +16,11 @@ def read_input():
     # this is the sample return, notice the rstrip function
     t_input=input()
     t_input=t_input.strip().upper()
-    if t_input=='I':
+    if t_input=="I":
         pattern=input().strip()
         text=input().strip()
-    elif t_input=='F':
-        with open("tests/06") as file:
+    elif t_input=="F":
+        with open('tests/06') as file:
             pattern=file.readline().strip()
             text=file.readline().strip()
     return t_input, pattern,text
@@ -34,11 +34,11 @@ def get_occurrences(pattern, text, t_input):
     text_l=len(text)
     pattern_l=len(pattern)
     occurances=[]
-    if t_input=='I':
+    if t_input=="I":
         for i in range(text_l-pattern_l+1):
             if text[i: i+pattern_l]==pattern:
                 occurances.append(i)
-    elif t_input=='F':
+    elif t_input=="F":
         pattern1=sum(ord(pattern[i])*pow(10,pattern_l-i-1) for i in range(pattern_l))
         text1=sum(ord(text[i])*pow(10,pattern_l-i-1) for i in range(pattern_l))
         for i in range(text_l-pattern_l+1):
