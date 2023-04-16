@@ -21,7 +21,7 @@ def read_input():
        
     elif t_input=="F":
         filename='tests/06'
-        with open("filename) as file:
+        with open(filename) as file:
             pattern=file.readline().strip()
             text=file.readline().strip()
             
