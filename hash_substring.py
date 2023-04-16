@@ -18,16 +18,16 @@ def read_input():
     if t_input=="I":
         pattern=input().strip()
         text=input().strip()
-       
+        return t_input, pattern,text
     elif t_input=="F":
         filename='tests/06'
         with open(filename) as file:
             pattern=file.readline().strip()
             text=file.readline().strip()
-            
+            return t_input, pattern,text
     else:
         exit()
-return t_input, pattern,text              
+              
     
 
 def print_occurrences(output):
